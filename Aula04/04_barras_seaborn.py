@@ -2,8 +2,12 @@
 import seaborn as sns
 import pandas as pd
 import matplotlib.pyplot as plt
+import os
 
-df = pd.read_csv(".\Aula04\dados_vendas.csv")
+#Montando o caminho completo para o arquivo CSV
+caminho = os.path.join("Aula04", "arquivos", "dados_vendas.csv")
+
+df = pd.read_csv(caminho)
 
 plt.figure(figsize=(10,5))
 sns.barplot(x="Mes", y="Vendas", data=df, palette="Blues")
