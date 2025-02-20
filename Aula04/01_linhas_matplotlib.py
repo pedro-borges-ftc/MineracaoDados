@@ -1,13 +1,14 @@
 import matplotlib.pyplot as plt
 
 meses = ["Jan", "Fev", "Mar", "Abr", "Mai", "Jun", "Jul", "Ago", "Set", "Out", "Nov", "Dez"]
-vendas = [2500, 2700, 2900, 3100, 3300, 3500, 3700, 3900, 4100, 4300, 4500, 4700]
+vendas = [2500, 2700, 2900, 3100, 2100, 3500, 3700, 1500, 4100, 4300, 4500, 4700]
 
 #Define o tamanho da figura.
 plt.figure(figsize=(10,5))
 
 #Cria um gráfico de linha.
-plt.plot(meses, vendas, marker='o', linestyle='-', color='b')
+#plt.plot(meses, vendas, marker='o', linestyle='-', color='b')
+plt.plot(meses, vendas, marker='o', color='green')
 
 #Define o título do gráfico.
 plt.title("Vendas Mensais em 2023")

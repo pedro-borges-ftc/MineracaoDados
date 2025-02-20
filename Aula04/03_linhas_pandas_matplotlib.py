@@ -6,7 +6,7 @@ import os
 
 #Dicionário com as vendas por mês
 meses = ["Jan", "Fev", "Mar", "Abr", "Mai", "Jun", "Jul", "Ago", "Set", "Out", "Nov", "Dez"]
-vendas = [2500, 2700, 2900, 3100, 3300, 3500, 3700, 3900, 4100, 4300, 4500, 4700]
+vendas = [2500, 2700, 2900, 3100, 3300, 1500, 3700, 3900, 1100, 4300, 4500, 4700]
 
 #Montando o caminho completo para o arquivo CSV
 caminho = os.path.join("Aula04", "arquivos", "dados_vendas.csv")
