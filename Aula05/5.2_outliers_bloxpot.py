@@ -24,16 +24,18 @@ def criar_grafico(coluna):
 colunas = [ "qtd_uh_financiadas", "vlr_financiamento", "vlr_subsidio"]
 
 coluna = colunas[0]
-#exibindo a média da coluna
-print("Media da coluna: ", df[coluna].mean())
+# Calcular média e desvio padrão
+media = df["vlr_financiamento"].mean()
+desvio_padrao = df["vlr_financiamento"].std()
 #chamando a função para gerar o gráfico para a coluna atual
 criar_grafico(coluna)
 
-#vamos verificar quais registros acima da media 
-df[coluna].loc[df[coluna] > 114]
+#vamos verificar quais registros ficam muito discrepantes da média e desvio padrão
+df[coluna].loc[(df[coluna] > media + 3 * desvio_padrao) | (df[coluna] < media - 3 * desvio_padrao)]
 
-#vamos verificar a quantidade de registros acima da media 
-df[coluna].loc[df[coluna] > 114].size
+#vamos verificar a quantidade de registros discrepantes da media
+df[coluna].loc[(df[coluna] > media + 3 * desvio_padrao) | (df[coluna] < media - 3 * desvio_padrao)].size
 
 #exibindo a média da coluna ignorando outliers
-print("Media da coluna ignorando outliers: ", df[coluna].loc[df[coluna] <= 114].mean())
+print("Media da coluna ignorando outliers: ",
+      df[coluna].loc[(df[coluna] > media + 3 * desvio_padrao) | (df[coluna] < media - 3 * desvio_padrao)].mean())

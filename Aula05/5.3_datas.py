@@ -14,7 +14,7 @@ df.info()
 df.head(10)
 
 # Converte a coluna 'data_referencia' para datetime
-df['data_referencia'] = pd.to_datetime(df['data_referencia'])
+df['data_referencia'] = pd.to_datetime(df['data_referencia'],dayfirst=True)
 
 # Criando novas colunas para o dia, mes e ano
 df['dia'] = df['data_referencia'].dt.day
