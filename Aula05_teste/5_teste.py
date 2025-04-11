@@ -1,12 +1,14 @@
 # Atividade Prática Integrada - Mineração de Dados com Pandas, Matplotlib e Seaborn
 # Tema: Finanças Pessoais
 
+import seaborn as sns
 import pandas as pd
 import matplotlib.pyplot as plt
-import seaborn as sns
+import os
 
 # 1. Leitura e preparação dos dados
-df = pd.read_csv("financas_pessoais.csv", delimiter=",")
+caminho = os.path.join("Finanças.csv")
+df = pd.read_csv(caminho, delimiter=";")
 
 # Convertendo colunas de data
 df["cadastro"] = pd.to_datetime(df["cadastro"], dayfirst=True)
