@@ -18,6 +18,9 @@ df.isnull()
 # Soma de Valores vazios no DataSet
 df.isnull().sum()
 
+# Usando apenas colunas numéricas
+colunas_numericas = df.select_dtypes(include=['int64', 'float64'])
+
 # Removendo dados faltantes do alvo coluna e remove definitivamente
 # df.dropna(subset=["num_ano_financiamento"],inplace=True)
 # df.dropna(subset=["cod_ibge"],inplace=True)
