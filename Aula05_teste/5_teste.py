@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 import os
 
 # 1. Leitura e preparação dos dados
-caminho = os.path.join("Finanças.csv")
+caminho = os.path.join("Aula05_teste","Finanças.csv")
 df = pd.read_csv(caminho, delimiter=";")
 
 # Convertendo colunas de data
