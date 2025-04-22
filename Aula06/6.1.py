@@ -31,15 +31,3 @@ df["vlr_financiamento"].isnull().sum()
 # Fazer uma lista com os dados faltantes
 dados_faltantes = df.columns[df.isnull().any()].tolist()
 dados_faltantes
-
-# Não vamos tratar os dados do tipo texto, apenas os Int e Float
-dados_faltantes = ['cod_ibge',
- 'num_ano_financiamento',
- 'vlr_subsidio']
-
-# Criar um método para substituir os dados faltantes pela média
-for coluna in dados_faltantes:
-    df[coluna].fillna(df[coluna].mean(),inplace=True)
-
-#
-df.info()

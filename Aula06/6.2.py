@@ -19,17 +19,6 @@ df.isnull().sum()
 # Usando apenas colunas numéricas
 colunas_numericas = df.select_dtypes(include=['int64', 'float64'])
 
-# Removendo dados faltantes do alvo coluna e remove definitivamente
-# df.dropna(subset=["num_ano_financiamento"],inplace=True)
-# df.dropna(subset=["cod_ibge"],inplace=True)
-# df.dropna(subset=["txt_municipio"],inplace=True)
-# df.dropna(subset=["txt_uf"],inplace=True)
-# df.dropna(subset=["vlr_subsidio"],inplace=True)
-df.dropna(subset=["vlr_financiamento"],inplace=True)
-df.info()
-df.isnull()
-df["vlr_financiamento"].isnull().sum()
-
 # Fazer uma lista com os dados faltantes
 dados_faltantes = df.columns[df.isnull().any()].tolist()
 dados_faltantes
