@@ -3,10 +3,8 @@ import pandas as pd
 import numpy as np
 import os
 
-#5.1 Correlação
-
 # Montando o caminho completo para o arquivo CSV
-caminho = os.path.join("Aula06", "arquivos06", "financiamentos_2024.csv")
+caminho = os.path.join("Aula06", "arquivos06", "financiamentos_2024_lixo.csv")
 
 # Lendo o arquivo CSV com delimitador ";"
 df = pd.read_csv(caminho, delimiter=";")
