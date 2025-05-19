@@ -1,0 +1,18 @@
+O arquivo Movimentacoes_Aeroportuarias_202401.csv fcontém 26 colunas, incluindo informações de:
+voos, aeronaves, passageiros, carga, datas e horários.
+
+✅ Projeto proposto:
+Tema: Previsão de alta movimentação de passageiros locais em voos registrados no aeroporto de referência.
+
+Objetivo do modelo: Dado um conjunto de informações de voo (aeronave, data, horário, tipo de serviço etc.), 
+prever se o número de passageiros locais (QT_PAX_LOCAL) ultrapassará um certo limite (por exemplo, 150 passageiros).
+
+O projeto incluirá:
+
+1. Leitura e limpeza dos dados com pandas;
+2. Análise e visualização com matplotlib;
+3. Correlação;
+4. Pré-processamento e seleção de atributos;
+5. Treinamento com MLPClassifier;
+6. Validação com train_test_split e KFold;
+7. Script interativo com o usuário.
